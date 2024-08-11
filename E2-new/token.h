@@ -1,7 +1,6 @@
 /* token.h */
 
-typedef enum
-{
+typedef enum{
     EOL = 0, // Final de linha
     NUMBER,
     PLUS,

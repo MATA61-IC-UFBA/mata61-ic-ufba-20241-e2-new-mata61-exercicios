@@ -2,22 +2,17 @@
 
 %option noyywrap nodefault yylineno
 %{
-#include <stdio.h>
 #include "token.h"
 
-int num;
 %}
 
 %%
-[0-9]+      { num = atoi(yytext); return NUMBER; }
+[ \t]+
+[0-9]+      { return NUMBER; }
+"+"     { return PLUS; }
+"-"     { return MINUS; }
+"*"     { return TIMES; }
+"/"     { return DIV; }
+\n      { return EOL; }
 .       { return ERROR; }
 %%
-
-int main() {
-
-
-}
-
-
-
-
