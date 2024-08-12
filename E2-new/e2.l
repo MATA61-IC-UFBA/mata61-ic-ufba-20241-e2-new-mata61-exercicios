@@ -21,10 +21,3 @@ int yylval;
 .       { return ERROR; }
 
 %%
-
-int yywrap() {
-    return 1;
-}
-
-
-
